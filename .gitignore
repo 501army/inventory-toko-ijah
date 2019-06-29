@@ -16,6 +16,5 @@
 /vendor/*
 !/vendor/vendor.json
 /Godeps/
-/config/config.json
 
 /tmp
