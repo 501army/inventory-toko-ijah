@@ -1,0 +1,10 @@
+{
+    "mode": "development",
+    "server":{
+        "host": "0.0.0.0",
+        "port": 2121
+    },
+    "secure": false,
+    "crt_file": "",
+    "key_file": ""
+}

@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/501army/inventory-toko-ijah/config"
-	"github.com/501army/inventory-toko-ijah/routes"
-	"github.com/501army/inventory-toko-ijah/utils/db"
+	"inventory-toko-ijah/config"
+	"inventory-toko-ijah/routes"
+	"inventory-toko-ijah/utils/db"
 
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
