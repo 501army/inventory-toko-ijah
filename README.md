@@ -25,9 +25,4 @@ Depedencies :
 - [Viper](https://github.com/spf13/viper)
 - [CORS](https://github.com/gin-contrib/cors)
 - [GORM](https://github.com/jinzhu/gorm)
-- [SqliteDriver](https://github.com/mattn/go-sqlite3)
-<!-- - [gjson](https://github.com/tidwall/gjson)
-- [uniqueId](https://github.com/rs/xid)
-- [random_string](https://github.com/chr4/pwgen)
-- [govalidator](https://github.com/asaskevich/govalidator)
-- [sentry](https://github.com/getsentry/sentry-go) -->
+- [go-sqlite3](https://github.com/mattn/go-sqlite3)

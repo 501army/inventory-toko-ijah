@@ -12,11 +12,12 @@ var db *gorm.DB
 
 // InitSqlite is
 func InitSqlite() {
-	db, err := gorm.Open("sqlite3", "./dbFile.db")
+	var err error
+	db, err = gorm.Open("sqlite3", "./dbFile.db")
 	if err != nil {
 		log.Println(err)
 	}
-	defer db.Close()
+	// defer db.Close()
 }
 
 // GetDB is

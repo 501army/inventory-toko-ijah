@@ -1,6 +1,8 @@
 package routes
 
 import (
+	"inventory-toko-ijah/controllers"
+
 	"github.com/gin-gonic/gin"
 )
 
@@ -9,28 +11,23 @@ type DefaultRoute struct{}
 
 //Init is
 func (d *DefaultRoute) Init(router *gin.Engine) {
-	// searchController := new(controllers.SearchController)
-	// stationController := new(controllers.StationController)
-	// bookController := new(controllers.BookController)
-	// seatController := new(controllers.SeatController)
-	// v1 := router.Group("/v1")
-	// {
-	// 	v1.GET("/train/station/add", stationController.AddStation)
-	// 	v1.GET("/train/station", stationController.Station)
-	// 	v1.GET("/train/search", searchController.Search)
-	// 	v1.POST("/train/book", bookController.Booking)
-	// 	v1.POST("/train/book/cancel", bookController.CancelBooking)
-	// 	v1.GET("/train/seat", seatController.SeatMap)
-	// 	v1.POST("/train/seat/change", seatController.ChangeSeat)
-	// 	v1.GET("/train/retrieve", bookController.Retrieve)
-	// }
-	// v2 := router.Group("v2")
-	// {
-	// 	v2.GET("/train/search", searchController.Searchv2)
-	// 	v2.POST("/train/book", bookController.Bookingv2)
-	// 	v2.GET("/train/retrieve", bookController.Retrievev2)
-	// 	v2.POST("/train/book/cancel", bookController.CancelBookingv2)
-	// }
+	barangController := new(controllers.BarangController)
+	barangMasukController := new(controllers.BarangMasukController)
+	barangKeluarController := new(controllers.BarangKeluarController)
+	v1 := router.Group("/v1")
+	{
+		v1.GET("/barang", barangController.GetAllBarang)
+		v1.POST("/barang/add", barangController.AddBarang)
+		v1.GET("/barang/:id_barang", barangController.GetBarangbyID)
+		v1.POST("/barang/update/:id_barang", barangController.UpdateBarang)
+		v1.POST("/barangmasuk/add", barangMasukController.AddBarangMasuk)
+		v1.POST("/barangkeluar/add", barangKeluarController.AddBarangKeluar)
+		v1.GET("/laporan/barang", barangController.LaporanBarang)
+		v1.GET("/laporan/penjualan", barangKeluarController.LaporanBarangKeluar)
+		v1.GET("/csv/barang", barangController.GenerateCsv)
+		v1.GET("/csv/barangmasuk", barangMasukController.GenerateCsv)
+		v1.GET("/csv/barangkeluar", barangKeluarController.GenerateCsv)
+	}
 	router.NoRoute(func(c *gin.Context) {
 		c.JSON(404, gin.H{
 			"status":  404,
