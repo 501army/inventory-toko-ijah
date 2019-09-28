@@ -4,7 +4,7 @@
 Instalation: 
 1. Make sure Go already [installed](https://golang.org/doc/install) in your machine and setup your [Go Workspace](https://golang.org/doc/code.html#Workspaces)
 2. Install [Govendor](https://github.com/kardianos/govendor) `go get github.com/kardianos/govendor`
-3. Go to inside $GOPATH/src/. Run `git clone https://github.com/501army/inventory-toko-ijah.git`
+3. Go to inside $GOPATH/src/. Run `git clone https://github.com/rabbitmeow/inventory-toko-ijah.git`
 4. Go to inside $GOPATH/src/inventory-toko-ijah
 5. Run `govendor sync` to pull all package needed and wait until finish
 6. Install [gcc](https://www.guru99.com/c-gcc-install.html) for compile the sqlite driver
